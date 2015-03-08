@@ -1,0 +1,31 @@
+{
+  "name": "es6-coverage-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watchify": " watchify -d -e interface/app/main.jsx -t babelify --outfile interface/bundle.js -v",
+    "test": "karma start karma.conf.js",
+    "alt_test": "karma start karma.conf.alt.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel": "^4.7.3",
+    "react": "^0.12.2"
+  },
+  "devDependencies": {
+    "babelify": "^5.0.4",
+    "browserify": "^9.0.3",
+    "isparta": "^2.2.0",
+    "istanbul": "^0.3.7",
+    "istanbulify": "^0.1.0",
+    "jasmine-core": "^2.2.0",
+    "karma": "^0.12.31",
+    "karma-browserify": "^4.0.0",
+    "karma-chrome-launcher": "^0.1.7",
+    "karma-coverage": "douglasduteil/karma-coverage#next",
+    "karma-jasmine": "^0.3.5",
+    "watchify": "^2.4.0"
+  }
+}
