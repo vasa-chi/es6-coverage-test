@@ -17,9 +17,9 @@
   "devDependencies": {
     "babelify": "^5.0.4",
     "browserify": "^9.0.3",
+    "browserify-istanbul": "^0.2.0",
     "isparta": "^2.2.0",
     "istanbul": "^0.3.7",
-    "istanbulify": "^0.1.0",
     "jasmine-core": "^2.2.0",
     "karma": "^0.12.31",
     "karma-browserify": "^4.0.0",

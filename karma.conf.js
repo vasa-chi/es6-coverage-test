@@ -1,3 +1,6 @@
+var isparta = require("isparta");
+var istanbul = require("browserify-istanbul");
+
 module.exports = function (config) {
   config.set({
     basePath: '',
@@ -20,7 +23,9 @@ module.exports = function (config) {
     },
 
     browserify: {
-      transform: ['babelify', 'istanbulify'],
+      transform: [istanbul({
+        instrumenter: isparta
+      })],
       debug: true
     },
 
@@ -32,13 +37,7 @@ module.exports = function (config) {
       reporters: [
         {type: 'text'},
         {type: 'html'}
-      ],
-      instrumenters: { isparta : require('isparta') },
-      instrumenter: {
-        'src/**/*.js': 'isparta',
-        'src/**/*.jsx': 'isparta',
-        'test/**/*.js': 'isparta'
-      }
+      ]
     }
   });
 };

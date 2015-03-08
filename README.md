@@ -1,32 +1,18 @@
-# babel + browserify + karma testing and code coverage (not working)
+# babel + browserify + karma testing and code coverage
 
 Currently I managed to get a text coverage report like this:
 ```
---------------------|-----------|-----------|-----------|-----------|
-File                |   % Stmts |% Branches |   % Funcs |   % Lines |
---------------------|-----------|-----------|-----------|-----------|
-   src/             |     93.33 |        75 |        75 |     92.31 |
-      helper.js     |     85.71 |       100 |        50 |     85.71 |
-      main.jsx      |       100 |        75 |       100 |       100 |
-   test/            |       100 |       100 |       100 |       100 |
-      main__test.js |       100 |       100 |       100 |       100 |
---------------------|-----------|-----------|-----------|-----------|
-All files           |     94.44 |        75 |     83.33 |     93.75 |
---------------------|-----------|-----------|-----------|-----------|
+----------------|-----------|-----------|-----------|-----------|
+File            |   % Stmts |% Branches |   % Funcs |   % Lines |
+----------------|-----------|-----------|-----------|-----------|
+   src/         |     93.33 |       100 |        75 |     85.71 |
+      helper.js |     85.71 |       100 |        50 |        80 |
+      main.jsx  |       100 |       100 |       100 |       100 |
+----------------|-----------|-----------|-----------|-----------|
+All files       |     93.33 |       100 |        75 |     85.71 |
+----------------|-----------|-----------|-----------|-----------|
 ```
 
-There are two configs for karma. First one (karma.conf.js) produces the above report, but fails to build a html report. Second one produces both text and html reports, but the coverage is 100%, which is obviously not the case here.
+Also html reports are produced.
 
-------
-
-To use the first config use:
-
-```shell
-$ npm run test
-```
-
-To use the second config use:
-
-```shell
-$ npm run alt_test
-```
+The main karma config is based on [this comment](https://github.com/douglasduteil/isparta/issues/5#issuecomment-74692090)
